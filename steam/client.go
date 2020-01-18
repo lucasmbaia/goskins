@@ -6,6 +6,8 @@ import (
 	"fmt"
 	"encoding/binary"
 	"bytes"
+
+	"github.com/lucasmbaia/goskins/steam/protocol/steamland"
 )
 
 const (
@@ -60,6 +62,24 @@ func (c *Client) Connect() (err error) {
 	return
 }
 
+func (c *Client) handlePackets(packet *steamland.Packet) {
+	switch packet.EMsg {
+	case steamland.EMsg_ChannelEncryptRequest:
+	case steamland.EMsg_ChannelEncryptResult:
+	case steamland.EMsg_Multi:
+	case steamland.EMsg_ClientCMList:
+	}
+}
+
+func (c *Client) handleChannelEncryptRequest(packet *steamland.Packet) {
+	var (
+		body	*steamland.MsgChannelEncryptRequest
+	)
+
+	body = NewMsgChannelEncryptRequest()
+	packet.ReadMsg(body)
+}
+
 func (c *Client) handleEvents() {
 }
 
@@ -77,7 +97,7 @@ func (c *Client) read() {
 			buffer	[]byte
 			pl	uint32
 			pm	uint32
-			t	uint32
+			packet	*Packet
 		)
 
 		if err = binary.Read(c.connection.conn, binary.LittleEndian, &pl); err != nil {
@@ -98,12 +118,12 @@ func (c *Client) read() {
 			break
 		}
 
-		if err = binary.Read(bytes.NewReader(buffer), binary.LittleEndian, &t); err != nil {
+		if packet,  err = steamland.NewPacket(buffer); err != nil {
 			break
 		}
 
-		fmt.Println(t)
 		fmt.Println(buffer)
+		c.handlePackets(packet)
 	}
 
 	c.Fatalf("Error reading from the connection: %v", err)
