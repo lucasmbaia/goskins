@@ -1,0 +1,295 @@
+Item: CS20 Case = 17601676009
+ClassID:  3564864937
+InstanceID:  0
+Item: Sealed Graffiti | Loser (Frog Green) = 17599508358
+ClassID:  1989319076
+InstanceID:  302028390
+Item: Sealed Graffiti | Worry (Princess Pink) = 17548348879
+ClassID:  1989286060
+InstanceID:  302028390
+Item: Danger Zone Case = 17539227739
+ClassID:  3106076656
+InstanceID:  0
+Item: StatTrak™ Desert Eagle | Bronze Deco (Minimal Wear) = 17529627341
+ClassID:  937252333
+InstanceID:  188538823
+Item: CS20 Case = 17408368077
+ClassID:  3564864937
+InstanceID:  0
+Item: AUG | Storm (Well-Worn) = 17392801743
+ClassID:  310777709
+InstanceID:  302028390
+Item: Clutch Case = 17384585128
+ClassID:  2727227113
+InstanceID:  0
+Item: UMP-45 | Mudder (Minimal Wear) = 17364217419
+ClassID:  3035571393
+InstanceID:  302028390
+Item: Sealed Graffiti | Speechless (SWAT Blue) = 17310412930
+ClassID:  1989299083
+InstanceID:  302028390
+Item: Spectrum 2 Case = 17291915474
+ClassID:  2521767801
+InstanceID:  0
+Item: Galil AR | Sage Spray (Field-Tested) = 17255863534
+ClassID:  310776543
+InstanceID:  302028390
+Item: Spectrum 2 Case = 17148164647
+ClassID:  2521767801
+InstanceID:  0
+Item: G3SG1 | Desert Storm (Field-Tested) = 17137933570
+ClassID:  310776595
+InstanceID:  302028390
+Item: Sealed Graffiti | Loser (Brick Red) = 17086767743
+ClassID:  1989275019
+InstanceID:  302028390
+Item: SG 553 | Waves Perforated (Well-Worn) = 17060036768
+ClassID:  310777235
+InstanceID:  302028390
+Item: Sealed Graffiti | GLHF (Bazooka Pink) = 17001729828
+ClassID:  1989278719
+InstanceID:  302028390
+Item: Spectrum 2 Case = 16977442263
+ClassID:  2521767801
+InstanceID:  0
+Item: MP9 | Slide (Field-Tested) = 16958880571
+ClassID:  3035569517
+InstanceID:  302028390
+Item: Spectrum 2 Case = 16300046178
+ClassID:  2521767801
+InstanceID:  0
+Item: P90 | Sand Spray (Minimal Wear) = 16283143726
+ClassID:  310777708
+InstanceID:  302028390
+Item: Sealed Graffiti | X-Knives (Desert Amber) = 16269587742
+ClassID:  1989328989
+InstanceID:  302028390
+Item: MAC-10 | Oceanic (Field-Tested) = 16269380936
+ClassID:  2531855935
+InstanceID:  188530139
+Item: Clutch Case = 16265392117
+ClassID:  2727227113
+InstanceID:  0
+Item: MP7 | Forest DDPAT (Well-Worn) = 16232679733
+ClassID:  469455734
+InstanceID:  302028390
+Item: P250 | Facility Draft (Minimal Wear) = 16196292248
+ClassID:  3035567605
+InstanceID:  302028390
+Item: Horizon Case = 16192814577
+ClassID:  2948874694
+InstanceID:  0
+Item: Sealed Graffiti | Double (Tracer Yellow) = 16171522028
+ClassID:  1989279965
+InstanceID:  302028390
+Item: Clutch Case = 16170081889
+ClassID:  2727227113
+InstanceID:  0
+Item: AWP | PAW (Minimal Wear) = 16090277530
+ClassID:  2960965651
+InstanceID:  480085569
+Item: Sealed Graffiti | Keep the Change (Battle Green) = 16089045209
+ClassID:  1989278748
+InstanceID:  302028390
+Item: Horizon Case = 16064537705
+ClassID:  2948874694
+InstanceID:  0
+Item: Sealed Graffiti | Double (SWAT Blue) = 16058919319
+ClassID:  1989322334
+InstanceID:  302028390
+Item: Sealed Graffiti | Eco (War Pig Pink) = 16022273870
+ClassID:  1989294266
+InstanceID:  302028390
+Item: Sealed Graffiti | Worry (War Pig Pink) = 15968284365
+ClassID:  1989278835
+InstanceID:  302028390
+Item: Sealed Graffiti | Speechless (Desert Amber) = 15950266583
+ClassID:  1989290732
+InstanceID:  302028390
+Item: Sealed Graffiti | GLHF (Princess Pink) = 15899396456
+ClassID:  1989338742
+InstanceID:  302028390
+Item: Spectrum 2 Case = 15866757518
+ClassID:  2521767801
+InstanceID:  0
+Item: Horizon Case = 15794078300
+ClassID:  2948874694
+InstanceID:  0
+Item: Sealed Graffiti | 8-Ball (Frog Green) = 15788206144
+ClassID:  1989285837
+InstanceID:  302028390
+Item: Sealed Graffiti | Rage Mode (Monarch Blue) = 15745527904
+ClassID:  1989305092
+InstanceID:  302028390
+Item: Horizon Case = 15707814069
+ClassID:  2948874694
+InstanceID:  0
+Item: Sealed Graffiti | Popdog (Violent Violet) = 15703540385
+ClassID:  1989282223
+InstanceID:  302028390
+Item: Tec-9 | Urban DDPAT (Battle-Scarred) = 15660883247
+ClassID:  469444346
+InstanceID:  302028390
+Item: Spectrum Case = 15660812886
+ClassID:  2209581061
+InstanceID:  0
+Item: Negev | Army Sheen (Minimal Wear) = 15526046147
+ClassID:  469445126
+InstanceID:  302028390
+Item: Spectrum Case = 15358429673
+ClassID:  2209581061
+InstanceID:  0
+Item: SSG 08 | Blue Spruce (Minimal Wear) = 15352797617
+ClassID:  310777545
+InstanceID:  302028390
+Item: PP-Bizon | Facility Sketch (Factory New) = 15323573257
+ClassID:  3035572347
+InstanceID:  302028390
+Item: Clutch Case = 15321408619
+ClassID:  2727227113
+InstanceID:  0
+Item: Sealed Graffiti | Toasted (Blood Red) = 15269624731
+ClassID:  1989288421
+InstanceID:  302028390
+Item: Clutch Case = 15269422188
+ClassID:  2727227113
+InstanceID:  0
+Item: Dual Berettas | Colony (Field-Tested) = 15253015277
+ClassID:  310777578
+InstanceID:  302028390
+Item: Horizon Case = 15252965472
+ClassID:  2948874694
+InstanceID:  0
+Item: Dual Berettas | Contractor (Battle-Scarred) = 15218432740
+ClassID:  310777038
+InstanceID:  302028390
+Item: Spectrum Case = 15196979495
+ClassID:  2209581061
+InstanceID:  0
+Item: Dual Berettas | Colony (Minimal Wear) = 15139586468
+ClassID:  310777025
+InstanceID:  302028390
+Item: Spectrum 2 Case = 15121853441
+ClassID:  2521767801
+InstanceID:  0
+Item: Sealed Graffiti | Eye Spy (Monarch Blue) = 15118080041
+ClassID:  1989310738
+InstanceID:  302028390
+Item: Spectrum 2 Case = 15097227148
+ClassID:  2521767801
+InstanceID:  0
+Item: Sealed Graffiti | Mr. Teeth (Tiger Orange) = 15078831821
+ClassID:  1989286390
+InstanceID:  302028390
+Item: Spectrum Case = 15065930816
+ClassID:  2209581061
+InstanceID:  0
+Item: Five-SeveN | Coolant (Minimal Wear) = 15056102791
+ClassID:  3035568564
+InstanceID:  302028390
+Item: Spectrum Case = 15033188832
+ClassID:  2209581061
+InstanceID:  0
+Item: Sealed Graffiti | NaCl (Shark White) = 15032609049
+ClassID:  1989279141
+InstanceID:  302028390
+Item: Spectrum Case = 15015355079
+ClassID:  2209581061
+InstanceID:  0
+Item: Sealed Graffiti | Speechless (Blood Red) = 15003027322
+ClassID:  1989319074
+InstanceID:  302028390
+Item: UMP-45 | Facility Dark (Field-Tested) = 14979332010
+ClassID:  3035569529
+InstanceID:  302028390
+Item: Glove Case = 14968565788
+ClassID:  2066632015
+InstanceID:  0
+Item: Dual Berettas | Contractor (Well-Worn) = 14952089118
+ClassID:  310777133
+InstanceID:  302028390
+Item: Spectrum 2 Case = 14947398700
+ClassID:  2521767801
+InstanceID:  0
+Item: MP7 | Forest DDPAT (Field-Tested) = 14931566741
+ClassID:  469448375
+InstanceID:  302028390
+Item: Spectrum Case = 14919455874
+ClassID:  2209581061
+InstanceID:  0
+Item: Sealed Graffiti | Mr. Teeth (Dust Brown) = 14914600713
+ClassID:  1989310070
+InstanceID:  302028390
+Item: Clutch Case = 14897779853
+ClassID:  2727227113
+InstanceID:  0
+Item: Nova | Polar Mesh (Minimal Wear) = 14886433276
+ClassID:  310776967
+InstanceID:  302028390
+Item: Clutch Case = 14875694088
+ClassID:  2727227113
+InstanceID:  0
+Item: Glove Case = 14842202504
+ClassID:  2066632015
+InstanceID:  0
+Item: Sealed Graffiti | Take Flight (Violent Violet) = 14842016555
+ClassID:  1989322475
+InstanceID:  302028390
+Item: Horizon Case = 14817324824
+ClassID:  2948874694
+InstanceID:  0
+Item: Spectrum Case = 14801845164
+ClassID:  2209581061
+InstanceID:  0
+Item: SG 553 | Waves Perforated (Field-Tested) = 14795178342
+ClassID:  310777246
+InstanceID:  302028390
+Item: Clutch Case = 14760219023
+ClassID:  2727227113
+InstanceID:  0
+Item: Spectrum 2 Case = 14741496683
+ClassID:  2521767801
+InstanceID:  0
+Item: FAMAS | Colony (Field-Tested) = 14737955253
+ClassID:  310776904
+InstanceID:  302028390
+Item: Spectrum Case = 14711221165
+ClassID:  2209581061
+InstanceID:  0
+Item: Spectrum 2 Case = 14707883004
+ClassID:  2521767801
+InstanceID:  0
+Item: R8 Revolver | Bone Mask (Field-Tested) = 14697798683
+ClassID:  1432174790
+InstanceID:  302028390
+Item: FAMAS | Teardown (Minimal Wear) = 14685689104
+ClassID:  310776853
+InstanceID:  302028390
+Item: M4A1-S | Briefing (Minimal Wear) = 14684786718
+ClassID:  2316439392
+InstanceID:  188530139
+Item: StatTrak™ Glock-18 | Bunsen Burner (Minimal Wear) = 14683504457
+ClassID:  2940088365
+InstanceID:  188584342
+Item: Sealed Graffiti | Sheriff (Violent Violet) = 14671834256
+ClassID:  1989315331
+InstanceID:  302028390
+Item: Spectrum Case = 14663132969
+ClassID:  2209581061
+InstanceID:  0
+Item: G3SG1 | Desert Storm (Minimal Wear) = 14652884114
+ClassID:  310777409
+InstanceID:  302028390
+Item: Spectrum 2 Case = 14621073180
+ClassID:  2521767801
+InstanceID:  0
+Item: Sealed Graffiti | Piggles (Monster Purple) = 14621019798
+ClassID:  1989273978
+InstanceID:  302028390
+Item: Glove Case = 14616240771
+ClassID:  2066632015
+InstanceID:  0
+Item: SG 553 | Waves Perforated (Field-Tested) = 14616240648
+ClassID:  310777246
+InstanceID:  302028390
+

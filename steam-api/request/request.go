@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"bytes"
 	"net/url"
+	"strings"
 )
 
 const (
@@ -27,6 +28,7 @@ type Response struct {
 type Options struct {
 	Body	    []byte
 	Headers	    map[string]string
+	BodyS	    string
 }
 
 type Client struct {
@@ -68,6 +70,10 @@ func (c *Client) Request(method, url string, o Options) (r Response, err error) 
 
 	if len(o.Body) > 0 {
 		pb = bytes.NewReader(o.Body)
+	}
+
+	if o.BodyS != "" {
+		pb = strings.NewReader(o.BodyS)
 	}
 
 	if req, err = http.NewRequest(method, url, pb); err != nil {

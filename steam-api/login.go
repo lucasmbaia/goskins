@@ -59,6 +59,7 @@ type Session struct {
 	deviceID    string
 	umqID	    string
 	language    string
+	apiKey	    string
 }
 
 func NewSession() (s *Session, err error) {
@@ -173,7 +174,6 @@ func (s *Session) doLogin(response *LoginResponse, accountName, password, twoFac
 		Value:	s.deviceID,
 	}))
 
-	fmt.Println(s)
 	return
 }
 
