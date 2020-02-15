@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/lucasmbaia/goskins/steam-api"
+	"strings"
 	"bufio"
 	"fmt"
 	"os"
@@ -9,12 +10,18 @@ import (
 )
 
 func main() {
+	var s *steam.Session
+	var err error
+
+	if s, err = steam.NewSession(); err != nil {
+		panic(err)
+	}
+
+	s.Login("", "", "")
+
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Code: ")
 	code, _ := reader.ReadString('\n')
-
-	var s *steam.Session
-	var err error
 
 	if s, err = steam.NewSession(); err != nil {
 		panic(err)
@@ -24,8 +31,31 @@ func main() {
 		panic(err)
 	}
 
+	var deviceID string
+
+	if deviceID, err = s.NewDeviceID(); err != nil {
+		panic(err)
+	}
+
+	fmt.Println("DEVICE ID: ", deviceID)
+	var authenticator steam.Authenticator
+
+	if authenticator, err = s.AddAuthenticator(deviceID); err != nil {
+		panic(err)
+	}
+
+	reader = bufio.NewReader(os.Stdin)
+	fmt.Print("SMS: ")
+	sms, _ := reader.ReadString('\n')
+	sms = strings.TrimSpace(sms)
+	s.FinalizeAddAuthenticator(sms, authenticator.Response.SharedSecret)
+
+	//fmt.Println(s.GetWebApiKey())
+	//s.GetAppPriceInfo(76561198072709722, 730)
+	//s.GetTradeOffers(steam.TradeFilterSentOffers, time.Now())
 	//s.GetPartnerInventory(76561198072709722, 730, 2, "https://steamcommunity.com/tradeoffer/new/?partner=112443994")
 
+	/***********************************************
 	var sid steam.SteamID
 	sid.ParseDefaults(112443994)
 
@@ -49,6 +79,11 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	*******************************************************/
+
+
+
+
 	/*_, err = s.GetWebApiKey()
 	if err != nil {
 		panic(err)

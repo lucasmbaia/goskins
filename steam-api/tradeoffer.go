@@ -270,10 +270,12 @@ func (s *Session) GetTradeOffers(filter uint32, t time.Time) (traders *TradeOffe
 		params.Set("time_historical_cutoff", strconv.FormatInt(t.Unix(), 10))
 	}
 
+	fmt.Println(getTradeOffers + params.Encode())
 	if resp, err = s.client.Request(request.GET, getTradeOffers + params.Encode(), request.Options{}); err != nil {
 		return
 	}
 
+	fmt.Println(string(resp.Body))
 	if err = json.Unmarshal(resp.Body, &api); err != nil {
 		return
 	}
