@@ -1,0 +1,9 @@
+package: github.com/lucasmbaia/goskins/api 
+owners:
+- name: Lucas Martins Baia
+  email: lucasmbaia@hotmail.com
+import:
+- package: github.com/gin-gonic/gin
+  version: 8a1bfcfd3b8b514f5cd9d36b575af204a86ddfb0
+- package: github.com/jinzhu/gorm
+  version: 1.9.12
