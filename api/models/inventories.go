@@ -6,12 +6,16 @@ import (
 )
 
 type InventoriesFields struct {
-	ID	    string  `json:",omitempty"`
-	User	    string  `json:",omitempty"`
+	ID	    string  `json:",omitempty" param:"inventory"`
+	User	    string  `json:",omitempty" param:"user"`
 }
 
 type Inventories struct {
 	Resources
+}
+
+func (InventoriesFields) TableName() string {
+	return "inventories"
 }
 
 func NewInventories() *Inventories {
@@ -21,11 +25,11 @@ func NewInventories() *Inventories {
 }
 
 func (i *Inventories) Get(filters []filter.Filters, args ...interface{}) (inventories []InventoriesFields, err error) {
-	err = i.DB.Read(filters, &inventories, args)
+	//err = i.DB.Read(filters, &inventories, args)
+	fmt.Println(filters)
 	return
 }
 
 func (i *Inventories) Post(data *InventoriesFields) (async bool, err error) {
-	fmt.Println(data)
 	return
 }

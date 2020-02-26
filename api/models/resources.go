@@ -2,7 +2,6 @@ package models
 
 import (
 	"reflect"
-	"fmt"
 
 	"github.com/lucasmbaia/goskins/api/models/interfaces"
 	"github.com/lucasmbaia/goskins/api/models/decorators"
@@ -21,19 +20,14 @@ func NewResources(m interface{}) interfaces.Models {
 	return decorators.NewTransaction(&Resources{Model: model})
 }
 
-func (r *Resources) Get(data interface{}) (response interface{}, err error) {
+func (r *Resources) Get(filters []filter.Filters, a ...interface{}) (response interface{}, err error) {
 	var (
 		args	[]reflect.Value
 		output	[]reflect.Value
-		v	reflect.Value
 		ok	bool
-		f	[]filter.Filters
-		a	[]interface{}
 	)
 
-	fmt.Println(data)
-	v = reflect.ValueOf(f)
-	args = append(args, v)
+	args = append(args, reflect.ValueOf(filters))
 	args = append(args, reflect.ValueOf(a))
 	output = r.Model.MethodByName("Get").Call(args)
 
@@ -45,6 +39,42 @@ func (r *Resources) Get(data interface{}) (response interface{}, err error) {
 
 	return
 }
+
+/*func (r *Resources) Get(data interface{}) (response interface{}, err error) {
+	var (
+		args	[]reflect.Value
+		output	[]reflect.Value
+		v	reflect.Value
+		ok	bool
+		f	[]filter.Filters
+		a	[]interface{}
+		t	reflect.Type
+	)
+
+	v = reflect.ValueOf(data).Elem()
+	t = v.Type()
+
+	for i := 0; i < v.NumField(); i++ {
+		f = append(f, filter.Filters{
+			Conditions: filter.Conditions{
+				Field:	t.Field(i).Name,
+				Value:	v.Field(i).Interface(),
+			},
+		})
+	}
+
+	args = append(args, reflect.ValueOf(f))
+	args = append(args, reflect.ValueOf(a))
+	output = r.Model.MethodByName("Get").Call(args)
+
+	if err, ok = output[1].Interface().(error); ok {
+		return
+	}
+
+	response = output[0].Interface()
+
+	return
+}*/
 
 func (r *Resources) Post(data interface{}) (async bool, err error) {
 	var (

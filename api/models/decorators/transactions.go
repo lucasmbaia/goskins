@@ -2,6 +2,7 @@ package decorators
 
 import (
 	"github.com/lucasmbaia/goskins/api/models/interfaces"
+	"github.com/lucasmbaia/goskins/api/repository/filter"
 )
 
 type Transaction struct {
@@ -12,8 +13,8 @@ func NewTransaction(m interfaces.Models) interfaces.Models {
 	return &Transaction{m}
 }
 
-func (t *Transaction) Get(data interface{}) (response interface{}, err error) {
-	response, err = t.Models.Get(data)
+func (t *Transaction) Get(filters []filter.Filters, args ...interface{}) (response interface{}, err error) {
+	response, err = t.Models.Get(filters, args)
 	return
 }
 

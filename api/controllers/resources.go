@@ -6,8 +6,10 @@ import (
 	"reflect"
 	"strings"
 	"regexp"
+	//"fmt"
 
 	"github.com/lucasmbaia/goskins/api/models/interfaces"
+	"github.com/lucasmbaia/goskins/api/repository/filter"
 	"github.com/gin-gonic/gin"
 )
 
@@ -22,14 +24,16 @@ func (r *Resources) Get(c *gin.Context) {
 		fields	= r.GetFields()
 		data	interface{}
 		err	error
+		filters	[]filter.Filters
+		args	[]interface{}
 	)
 
-	if err = r.setParams(c, fields); err != nil {
+	if filters, err = r.setParams(c, fields); err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"code": http.StatusInternalServerError, "message": err.Error()})
 		return
 	}
 
-	if data, err = m.Get(fields); err != nil {
+	if data, err = m.Get(filters, args); err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"code": http.StatusInternalServerError, "message": err.Error()})
 		return
 	}
@@ -47,7 +51,7 @@ func (r *Resources) Post(c *gin.Context) {
 		async bool
 	)
 
-	if err = r.setParams(c, data); err != nil {
+	if _, err = r.setParams(c, data); err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"code": http.StatusInternalServerError, "message": err.Error()})
 		return
 	}
@@ -73,13 +77,17 @@ func (r *Resources) Post(c *gin.Context) {
 	return
 }
 
-func (r *Resources) setParams(c *gin.Context, filters interface{}) (err error) {
+func (r *Resources) setParams(c *gin.Context, data interface{}) (filters []filter.Filters, err error) {
 	var (
 		rgx     = regexp.MustCompile(`\/(:[^:\/]*)`)
 		matches []string
 		params  = make(map[string]interface{})
 		str     string
 		body    []byte
+		v	reflect.Value
+		t	reflect.Type
+		param	string
+		name	string
 	)
 
 	matches = rgx.FindAllString(c.FullPath(), -1)
@@ -89,11 +97,34 @@ func (r *Resources) setParams(c *gin.Context, filters interface{}) (err error) {
 		params[str] = c.Param(str)
 	}
 
+	v = reflect.ValueOf(data).Elem()
+	t = v.Type()
+
+	for i := 0; i < v.NumField(); i++ {
+		name = t.Field(i).Name
+
+		if tag, ok := t.FieldByName(name); ok {
+			param = tag.Tag.Get("param")
+			if param != "" {
+				if _, ok := params[param]; ok {
+					v.Field(i).Set(reflect.ValueOf(params[param]))
+
+					filters = append(filters, filter.Filters{
+						Conditions: filter.Conditions{
+							Field:	name,
+							Value:	params[param],
+						},
+					})
+				}
+			}
+		}
+	}
+
 	if body, err = json.Marshal(params); err != nil {
 		return
 	}
 
-	if err = json.Unmarshal(body, filters); err != nil {
+	if err = json.Unmarshal(body, data); err != nil {
 		return
 	}
 

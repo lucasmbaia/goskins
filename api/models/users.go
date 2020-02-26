@@ -2,13 +2,18 @@ package models
 
 import (
 	"github.com/lucasmbaia/goskins/api/repository/filter"
+	"github.com/lucasmbaia/goskins/api/config"
 )
 
 type UsersFields struct {
-	ID	    string  `json:",omitempty" url:"User"`
+	ID	    string  `json:",omitempty" param:"user"`
 	Name	    string  `json:",omitempty"`
 	NickName    string  `json:",omitempty"`
 	SteamID	    string  `json:"-"`
+}
+
+func (UsersFields) TableName() string {
+	return "users"
 }
 
 type Users struct {
@@ -17,23 +22,18 @@ type Users struct {
 
 func NewUsers() *Users {
 	var users = &Users{}
+	users.DB = config.EnvSingletons.DB
 
 	return users
 }
 
 func (u *Users) Get(filters []filter.Filters, args ...interface{}) (users []UsersFields, err error) {
-	//err = u.DB.Read(filters, &users, args)
-	users = []UsersFields{{
-		ID:	    "e963f7a2-cdce-4514-9204-9a670811c704",
-		Name:	    "teste",
-		NickName:   "teste",
-		SteamID:    "1",
-	}}
+	users = []UsersFields{}
+	err = u.DB.Read(filters, &users, args)
 
 	return
 }
 
 func (u *Users) Post(data *UsersFields) (async bool, err error) {
-	data.ID = "e963f7a2-cdce-4514-9204-9a670811c704"
 	return
 }

@@ -27,7 +27,9 @@ type GormConfig struct {
 	ConnsMaxLifetime  int	  `json:",omitempty"`
 }
 
-func NewGorm(cfg GormConfig) (g Gorm, err error) {
+func NewGorm(cfg GormConfig) (g *Gorm, err error) {
+	g = &Gorm{}
+
 	if g.DB, err = _gorm.Open("mysql", fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?parseTime=true&timeout=%s", cfg.Username, cfg.Password, cfg.Host, cfg.Port, cfg.DBName, cfg.Timeout)); err != nil {
 		return
 	}
@@ -47,7 +49,7 @@ func (g *Gorm) Create(entity interface{}) (err error) {
 func (g *Gorm) Read(f []filter.Filters, entity interface{}, args ...interface{}) (err error) {
 	var (
 		limit	  int
-		operation *gorm.DB
+		operation *_gorm.DB
 		fields	  string
 		values	  []interface{}
 	)
@@ -59,7 +61,10 @@ func (g *Gorm) Read(f []filter.Filters, entity interface{}, args ...interface{})
 		}
 	}
 
-	if len(filters) > 0 {
+	fmt.Println(f)
+	fmt.Println(entity)
+	
+	if len(f) > 0 {
 		fields, values = filter.Join(f)
 		if limit == 1 {
 			operation = g.DB.Where(fields, values...).First(&entity)
@@ -67,7 +72,7 @@ func (g *Gorm) Read(f []filter.Filters, entity interface{}, args ...interface{})
 			operation = g.DB.Where(fields, values...).Find(&entity)
 		}
 	} else {
-		operation = g.DB.Find(&entity)
+		operation = g.DB.Find(entity)
 	}
 
 	if operation.Error != nil {
