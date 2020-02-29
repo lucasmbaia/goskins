@@ -42,157 +42,144 @@
 </head>
 <body cz-shortcut-listen="true">
 <!-- Header Wrap Starts -->
-  <header class="header-wrap">
-  <!-- Nested Container Starts -->
-    <div class="container">
-    <!-- Topbar Starts -->
-      <div class="topbar clearfix">
-      <!-- Top Links Starts -->
-        <ul class="list-unstyled list-inline topbar-links pull-left mb-0">
-          <li>
-            <a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=information/contact"><i class="fa fa-phone"></i></a><span class="hidden-xs hidden-sm hidden-md">123456789</span>
-          </li>
-          <li class="dropdown"><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=account/account" title="My Account" class="dropdown-toggle" data-toggle="dropdown">
-            <i class="fa fa-user"></i><span class="hidden-xs hidden-sm hidden-md">My Account</span> 
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu dropdown-menu-right rounded-0">
-                            <li><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=account/register">Register</a></li>
-              <li><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=account/login">Login</a></li>
-                          </ul>
-          </li>
-          <li>
-            <a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=account/wishlist" id="wishlist-total" title="Wish List (0)"><i class="fa fa-heart"></i><span class="hidden-xs hidden-sm hidden-md">Wish List (0)</span></a>
-          </li>
-          <li>
-            <a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=checkout/cart" title="Shopping Cart"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Shopping Cart</span></a>
-          </li>
-          <li>
-            <a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=checkout/checkout" title="Checkout"><i class="fa fa-share"></i><span class="hidden-xs hidden-sm hidden-md">Checkout</span></a>
-          </li>
-        </ul>
-      <!-- Top Links Ends -->
-      <div class="pull-right">
-        <div class="pull-left">
-          <a href="#loginModal" data-toggle="modal" data-target="#loginModal"><img src="./Black Opencart_files/btLogin.png" alt="Steam Login"></a>
-        </div>
-      </div>
-      <!-- Currency Starts -->
-        <div class="pull-right"><div class="pull-left">
-  <form action="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=common/currency/currency" method="post" enctype="multipart/form-data" id="form-currency">
-    <div class="btn-group">
-      <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">                               <strong>$</strong>        <span class="hidden-xs hidden-sm hidden-md">Currency</span>&nbsp;<i class="fa fa-caret-down"></i></button>
-      <ul class="dropdown-menu dropdown-menu-right rounded-0">
-                        <li>
-          <button class="currency-select btn btn-link btn-block" type="button" name="EUR">€ Euro</button>
-        </li>
-                                <li>
-          <button class="currency-select btn btn-link btn-block" type="button" name="GBP">£ Pound Sterling</button>
-        </li>
-                                <li>
-          <button class="currency-select btn btn-link btn-block" type="button" name="USD">$ US Dollar</button>
-        </li>
-                      </ul>
-    </div>
-    <input type="hidden" name="code" value="">
-    <input type="hidden" name="redirect" value="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=common/home">
-  </form>
-</div>
- </div>
-      <!-- Currency Ends -->
-      <!-- Language Starts -->
-        <div class="pull-right"><div class="pull-left">
-  <form action="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=common/language/language" method="post" enctype="multipart/form-data" id="form-language">
-    <div class="btn-group">
-      <button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
-             
-      <img src="./Black Opencart_files/en-gb.png" alt="English" title="English">
-                  <span class="hidden-xs hidden-sm hidden-md">Language</span>&nbsp;<i class="fa fa-caret-down"></i></button>
-      <ul class="dropdown-menu dropdown-menu-right rounded-0">
-                <li>
-          <button class="btn btn-link btn-block language-select" type="button" name="en-gb"><img src="./Black Opencart_files/en-gb.png" alt="English" title="English">English</button>
-        </li>
-              </ul>
-    </div>
-    <input type="hidden" name="code" value="">
-    <input type="hidden" name="redirect" value="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=common/home">
-  </form>
-</div>
-</div>
-      <!-- Language Ends -->
-      </div>
-    <!-- Topbar Ends -->
-    <!-- Main Header Starts -->
-      <div class="main-header">
-      <!-- Nested Row Starts -->
-        <div class="row">
-        <!-- Logo Starts -->
-          <div class="col-sm-3 col-xs-12">
-            <div class="logo">
-                          <a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=common/home"><img src="./Black Opencart_files/blackoc-logo.png" title="Your Store" alt="Your Store" class="img-responsive img-center-xs"></a>
-                        </div>
-          </div>
-        <!-- Logo Ends -->
-        <!-- Search Starts -->
-          <div class="col-lg-5 col-sm-6 col-xs-12 col-lg-offset-1">
-            <div id="search" class="input-group">
-  <input type="text" name="search" value="" placeholder="Search" class="form-control">
-  <span class="input-group-btn">
-    <button type="button" class="btn"><i class="fa fa-search"></i></button>
-  </span>
-</div>
-          </div>
-        <!-- Search Ends -->
-        <!-- Cart Starts -->
-          <div class="col-sm-3 col-xs-12">
-            <div id="cart" class="btn-group btn-block pull-right-lg pull-right-md pull-right-sm">
-  <button type="button" data-toggle="dropdown" data-loading-text="Loading..." class="btn btn-block dropdown-toggle"><i class="fa fa-shopping-cart"></i> <span id="cart-total">0 item(s) - $0.00</span></button>
-  <ul class="dropdown-menu pull-right rounded-0">
-        <li>
-      <p class="text-center cart-empty">Your shopping cart is empty!</p>
-    </li>
-      </ul>
-</div>
-
-          </div>
-        <!-- Cart Ends -->
-        </div>
-      <!-- Nested Row Ends -->
-      </div>
-    <!-- Main Header Ends -->
-    </div>
-  <!-- Nested Container Ends -->
-  </header>
-<!-- Header Wrap Ends -->
-<nav id="menu" class="navbar main-menu rounded-0">
-  <div class="container">
-    <div class="navbar-header"><span id="category" class="visible-xs">Categories</span>
-      <button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
-    </div>
-    <div class="collapse navbar-collapse navbar-ex1-collapse">
-      <ul class="nav navbar-nav">
-                        <li class="dropdown"><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=20" class="dropdown-toggle" data-toggle="dropdown">Rifles</a>
-          <div class="dropdown-menu" style="">
-            <div class="dropdown-inner">               <ul class="list-unstyled">
-                                <li><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=20_26">AK-47</a></li>
-                                <li><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=20_27">M4A4</a></li>
-                              </ul>
-              </div>
-            <a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=20" class="see-all">Mostre Todos Rifles</a> </div>
-        </li>
-                                <li class="dropdown"><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=18" class="dropdown-toggle" data-toggle="dropdown">Pistolas</a>
-          <div class="dropdown-menu" style="">
-            <div class="dropdown-inner">               <ul class="list-unstyled">
-                                <li><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=18_46">USP</a></li>
-                                <li><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=18_45">Desert Eagle</a></li>
-                              </ul>
-              </div>
-            <a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=18" class="see-all">Mostre Todas Pistolas</a> </div>
-        </li>
-                                
-                      </ul>
-    </div>
-  </div>
-</nav>
+	<header class="header-wrap">
+		<!-- Nested Container Starts -->
+		<div class="container">
+		<!-- Topbar Starts -->
+			<div class="topbar clearfix">
+				<!-- Top Links Ends -->
+				<div class="pull-right">
+					<div class="pull-left">
+					<a href="#loginModal" data-toggle="modal" data-target="#loginModal"><img src="./Black Opencart_files/btLogin.png" alt="Steam Login"></a>
+					</div>
+				</div>
+				<!-- Currency Starts -->
+				<div class="pull-right">
+					<div class="pull-left">
+						<form action="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=common/currency/currency" method="post" enctype="multipart/form-data" id="form-currency">
+							<div class="btn-group">
+								<button class="btn btn-link dropdown-toggle" data-toggle="dropdown">                               <strong>$</strong>        <span class="hidden-xs hidden-sm hidden-md">Currency</span>&nbsp;<i class="fa fa-caret-down"></i></button>
+								<ul class="dropdown-menu dropdown-menu-right rounded-0">
+									<li>
+										<button class="currency-select btn btn-link btn-block" type="button" name="EUR">€ Euro</button>
+									</li>
+									<li>
+										<button class="currency-select btn btn-link btn-block" type="button" name="GBP">£ Pound Sterling</button>
+									</li>
+									<li>
+										<button class="currency-select btn btn-link btn-block" type="button" name="USD">$ US Dollar</button>
+									</li>
+								</ul>
+							</div>
+							<input type="hidden" name="code" value="">
+							<input type="hidden" name="redirect" value="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=common/home">
+						</form>
+					</div>
+				</div>
+				<!-- Currency Ends -->
+				<!-- Language Starts -->
+				<div class="pull-right">
+					<div class="pull-left">
+						<form action="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=common/language/language" method="post" enctype="multipart/form-data" id="form-language">
+							<div class="btn-group">
+								<button class="btn btn-link dropdown-toggle" data-toggle="dropdown">
+								<img src="./Black Opencart_files/en-gb.png" alt="English" title="English">
+								<span class="hidden-xs hidden-sm hidden-md">Language</span>&nbsp;<i class="fa fa-caret-down"></i></button>
+								<ul class="dropdown-menu dropdown-menu-right rounded-0">
+									<li>
+										<button class="btn btn-link btn-block language-select" type="button" name="en-gb"><img src="./Black Opencart_files/en-gb.png" alt="English" title="English">English</button>
+									</li>
+								</ul>
+							</div>
+							<input type="hidden" name="code" value="">
+							<input type="hidden" name="redirect" value="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=common/home">
+						</form>
+					</div>
+				</div>
+				<div class="pull-right">
+					<div class="pull-left">
+						<a href="account.htm">
+							<i class="fa fa-user"></i><span class="hidden-xs hidden-sm hidden-md">My Account</span> 
+						</a>
+					</div>
+				</div>
+				<!-- Language Ends -->
+			</div>
+			<!-- Topbar Ends -->
+			<!-- Main Header Starts -->
+			<div class="main-header">
+				<!-- Nested Row Starts -->
+				<div class="row">
+					<!-- Logo Starts -->
+					<div class="col-sm-3 col-xs-12">
+						<div class="logo">
+							<a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=common/home"><img src="./Black Opencart_files/blackoc-logo.png" title="Your Store" alt="Your Store" class="img-responsive img-center-xs"></a>
+						</div>
+					</div>
+					<!-- Logo Ends -->
+					<!-- Search Starts -->
+					<div class="col-lg-5 col-sm-6 col-xs-12 col-lg-offset-1">
+						<div id="search" class="input-group">
+							<input type="text" name="search" value="" placeholder="Search" class="form-control">
+							<span class="input-group-btn">
+								<button type="button" class="btn"><i class="fa fa-search"></i></button>
+							</span>
+						</div>
+					</div>
+					<!-- Search Ends -->
+					<!-- Cart Starts -->
+					<div class="col-sm-3 col-xs-12">
+						<div id="cart" class="btn-group btn-block pull-right-lg pull-right-md pull-right-sm">
+							<button type="button" data-toggle="dropdown" data-loading-text="Loading..." class="btn btn-block dropdown-toggle"><i class="fa fa-shopping-cart"></i> <span id="cart-total">0 item(s) - $0.00</span></button>
+							<ul class="dropdown-menu pull-right rounded-0">
+								<li>
+									<p class="text-center cart-empty">Your shopping cart is empty!</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- Cart Ends -->
+				</div>
+				<!-- Nested Row Ends -->
+			</div>
+			<!-- Main Header Ends -->
+		</div>
+		<!-- Nested Container Ends -->
+	</header>
+	<!-- Header Wrap Ends -->
+	<nav id="menu" class="navbar main-menu rounded-0">
+		<div class="container">
+			<div class="navbar-header"><span id="category" class="visible-xs">Categories</span>
+				<button type="button" class="btn btn-navbar navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse"><i class="fa fa-bars"></i></button>
+			</div>
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li class="dropdown"><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=20" class="dropdown-toggle" data-toggle="dropdown">Rifles</a>
+						<div class="dropdown-menu" style="">
+							<div class="dropdown-inner">               
+								<ul class="list-unstyled">
+									<li><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=20_26">AK-47</a></li>
+									<li><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=20_27">M4A4</a></li>
+								</ul>
+							</div>
+							<a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=20" class="see-all">Mostre Todos Rifles</a> 
+						</div>
+					</li>
+					<li class="dropdown"><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=18" class="dropdown-toggle" data-toggle="dropdown">Pistolas</a>
+						<div class="dropdown-menu" style="">
+							<div class="dropdown-inner">               
+								<ul class="list-unstyled">
+									<li><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=18_46">USP</a></li>
+									<li><a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=18_45">Desert Eagle</a></li>
+								</ul>
+							</div>
+							<a href="http://sainathchillapuram.com/tf/opencart/blackoc/index.php?route=product/category&amp;path=18" class="see-all">Mostre Todas Pistolas</a> 
+						</div>
+					</li>										
+				</ul>
+			</div>
+		</div>
+	</nav>
  
 <!-- Main Container Starts -->
   <div class="main-container"><div class="main-slider swiper-viewport">
