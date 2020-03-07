@@ -61,15 +61,12 @@ func (g *Gorm) Read(f []filter.Filters, entity interface{}, args ...interface{})
 		}
 	}
 
-	fmt.Println(f)
-	fmt.Println(entity)
-	
 	if len(f) > 0 {
 		fields, values = filter.Join(f)
 		if limit == 1 {
-			operation = g.DB.Where(fields, values...).First(&entity)
+			operation = g.DB.Where(fields, values...).First(entity)
 		} else {
-			operation = g.DB.Where(fields, values...).Find(&entity)
+			operation = g.DB.Where(fields, values...).Find(entity)
 		}
 	} else {
 		operation = g.DB.Find(entity)

@@ -28,6 +28,11 @@ func (r *Resources) Get(c *gin.Context) {
 		args	[]interface{}
 	)
 
+	if err = c.ShouldBindQuery(fields); err != nil{
+		c.JSON(http.StatusInternalServerError, gin.H{"code": http.StatusInternalServerError, "message": err.Error()})
+		return
+	}
+
 	if filters, err = r.setParams(c, fields); err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"code": http.StatusInternalServerError, "message": err.Error()})
 		return
@@ -88,6 +93,7 @@ func (r *Resources) setParams(c *gin.Context, data interface{}) (filters []filte
 		t	reflect.Type
 		param	string
 		name	string
+		field	string
 	)
 
 	matches = rgx.FindAllString(c.FullPath(), -1)
@@ -104,16 +110,26 @@ func (r *Resources) setParams(c *gin.Context, data interface{}) (filters []filte
 		name = t.Field(i).Name
 
 		if tag, ok := t.FieldByName(name); ok {
+			field = tag.Tag.Get("model")
 			param = tag.Tag.Get("param")
+
+			if field == "" {
+				field = name
+			}
+
+			if !v.Field(i).IsZero() {
+				filters = append(filters, filter.Filters{
+					Conditions: filter.Conditions{Field: field}.Eq(v.Field(i).Interface()),
+				})
+			}
+
 			if param != "" {
 				if _, ok := params[param]; ok {
 					v.Field(i).Set(reflect.ValueOf(params[param]))
 
+
 					filters = append(filters, filter.Filters{
-						Conditions: filter.Conditions{
-							Field:	name,
-							Value:	params[param],
-						},
+						Conditions: filter.Conditions{Field: field}.Eq(params[param]),
 					})
 				}
 			}

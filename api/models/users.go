@@ -6,10 +6,11 @@ import (
 )
 
 type UsersFields struct {
-	ID	    string  `json:",omitempty" param:"user"`
-	Name	    string  `json:",omitempty"`
-	NickName    string  `json:",omitempty"`
-	SteamID	    string  `json:"-"`
+	ID	    string  `json:",omitempty" param:"user" model:"id"`
+	Name	    string  `json:",omitempty" model:"name"`
+	NickName    string  `json:",omitempty" model:"nick_name"`
+	TraderURL   string  `json:",omitempty" model:"trader_url"`
+	SteamID	    string  `json:"-" model:"steam_id"`
 }
 
 func (UsersFields) TableName() string {
@@ -35,5 +36,9 @@ func (u *Users) Get(filters []filter.Filters, args ...interface{}) (users []User
 }
 
 func (u *Users) Post(data *UsersFields) (async bool, err error) {
+	return
+}
+
+func (u *Users) Patch(data *UsersFields, filters []filter.Filters) (err error) {
 	return
 }
